@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acc_fin_category,acc_fin_category,model_finance_category,base.group_user,1,1,1,1
+acc_fin_wallet,acc_fin_wallet,model_finance_wallet,base.group_user,1,1,1,1
+acc_fin_income,acc_fin_income,model_finance_income,base.group_user,1,1,1,1
+acc_fin_expense,acc_fin_expense,model_finance_expense,base.group_user,1,1,1,1
+acc_fin_goal,acc_fin_goal,model_finance_saving_goal,base.group_user,1,1,1,1
+acc_fin_transfer,acc_fin_transfer,model_finance_transfer,base.group_user,1,1,1,1
+acc_fin_debt_account,acc_fin_debt_account,model_finance_debt_account,base.group_user,1,1,1,1
+acc_fin_debt_payment,acc_fin_debt_payment,model_finance_debt_payment,base.group_user,1,1,1,1
+acc_fin_asset,acc_fin_asset,model_finance_asset,base.group_user,1,1,1,1
+acc_fin_holding,acc_fin_holding,model_finance_holding,base.group_user,1,1,1,1
+acc_fin_trade,acc_fin_trade,model_finance_trade,base.group_user,1,1,1,1
+acc_fin_dividend,acc_fin_dividend,model_finance_dividend,base.group_user,1,1,1,1

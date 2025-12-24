@@ -1,0 +1,38 @@
+<odoo>
+  <record id="view_fin_category_tree" model="ir.ui.view">
+    <field name="name">finance.category.tree</field>
+    <field name="model">finance.category</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="type"/>
+        <field name="budget_monthly"/>
+        <field name="active"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_fin_category_form" model="ir.ui.view">
+    <field name="name">finance.category.form</field>
+    <field name="model">finance.category</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="type"/>
+            <field name="parent_id"/>
+            <field name="budget_monthly"/>
+            <field name="active"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_fin_category" model="ir.actions.act_window">
+    <field name="name">Categories</field>
+    <field name="res_model">finance.category</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

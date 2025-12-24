@@ -1,0 +1,13 @@
+<odoo>
+  <record id="action_fin_expense_pie_month" model="ir.actions.act_window">
+    <field name="name">Expenses by Category</field>
+    <field name="res_model">finance.expense</field>
+    <field name="view_mode">graph,pivot,tree</field>
+    <field name="context">
+      {"graph_measure":"amount","graph_groupby":"category_id"}
+    </field>
+  </record>
+
+  <menuitem id="menu_fin_dashboard" name="Dashboard"
+            parent="menu_fin_root" action="action_fin_expense_pie_month" sequence="1"/>
+</odoo>

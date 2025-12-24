@@ -1,0 +1,132 @@
+<odoo>
+  <record id="view_fin_asset_tree" model="ir.ui.view">
+    <field name="name">finance.asset.tree</field>
+    <field name="model">finance.asset</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="symbol"/>
+        <field name="asset_type"/>
+        <field name="currency_id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_fin_asset_form" model="ir.ui.view">
+    <field name="name">finance.asset.form</field>
+    <field name="model">finance.asset</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="symbol"/>
+            <field name="asset_type"/>
+            <field name="currency_id"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_fin_holding_tree" model="ir.ui.view">
+    <field name="name">finance.holding.tree</field>
+    <field name="model">finance.holding</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="asset_id"/>
+        <field name="wallet_id"/>
+        <field name="quantity"/>
+        <field name="avg_cost"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_fin_trade_tree" model="ir.ui.view">
+    <field name="name">finance.trade.tree</field>
+    <field name="model">finance.trade</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="date"/>
+        <field name="asset_id"/>
+        <field name="wallet_id"/>
+        <field name="action"/>
+        <field name="qty"/>
+        <field name="price"/>
+        <field name="fees"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_fin_trade_form" model="ir.ui.view">
+    <field name="name">finance.trade.form</field>
+    <field name="model">finance.trade</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="date"/>
+            <field name="asset_id"/>
+            <field name="wallet_id"/>
+            <field name="action"/>
+            <field name="qty"/>
+            <field name="price"/>
+            <field name="fees"/>
+            <field name="currency_id"/>
+            <field name="note"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_fin_dividend_tree" model="ir.ui.view">
+    <field name="name">finance.dividend.tree</field>
+    <field name="model">finance.dividend</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="asset_id"/>
+        <field name="pay_date"/>
+        <field name="amount_gross"/>
+        <field name="tax_withheld"/>
+        <field name="amount_net"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_fin_dividend_form" model="ir.ui.view">
+    <field name="name">finance.dividend.form</field>
+    <field name="model">finance.dividend</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="asset_id"/>
+            <field name="ex_date"/>
+            <field name="pay_date"/>
+            <field name="amount_gross"/>
+            <field name="tax_withheld"/>
+            <field name="amount_net" readonly="1"/>
+            <field name="currency_id"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_fin_asset" model="ir.actions.act_window">
+    <field name="name">Assets</field>
+    <field name="res_model">finance.asset</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="action_fin_trade" model="ir.actions.act_window">
+    <field name="name">Trades</field>
+    <field name="res_model">finance.trade</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="action_fin_dividend" model="ir.actions.act_window">
+    <field name="name">Dividends</field>
+    <field name="res_model">finance.dividend</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

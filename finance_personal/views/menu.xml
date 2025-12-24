@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <menuitem id="menu_fin_root" name="Personal Finance" sequence="10"/>
+  <menuitem id="menu_fin_trans" name="Transactions" parent="menu_fin_root" sequence="10"/>
+  <menuitem id="menu_fin_cfg" name="Configuration" parent="menu_fin_root" sequence="90"/>
+
+  <!-- submenus -->
+  <menuitem id="menu_fin_income"  name="Incomes"  parent="menu_fin_trans" action="action_fin_income"/>
+  <menuitem id="menu_fin_expense" name="Expenses" parent="menu_fin_trans" action="action_fin_expense"/>
+  <menuitem id="menu_fin_transfer" name="Transfers" parent="menu_fin_trans" action="action_fin_transfer"/>
+
+  <menuitem id="menu_fin_saving" name="Savings" parent="menu_fin_root" sequence="20" action="action_fin_goal"/>
+  <menuitem id="menu_fin_debt"   name="Debts"   parent="menu_fin_root" sequence="30" action="action_fin_debt_account"/>
+  <menuitem id="menu_fin_debt_pay" name="Debt Payments" parent="menu_fin_debt" action="action_fin_debt_payment"/>
+
+  <menuitem id="menu_fin_inv"    name="Investments" parent="menu_fin_root" sequence="40" action="action_fin_asset"/>
+  <menuitem id="menu_fin_trade"  name="Trades"      parent="menu_fin_inv" action="action_fin_trade"/>
+  <menuitem id="menu_fin_div"    name="Dividends"   parent="menu_fin_inv" action="action_fin_dividend"/>
+
+  <menuitem id="menu_fin_category" name="Categories" parent="menu_fin_cfg" action="action_fin_category"/>
+  <menuitem id="menu_fin_wallet"   name="Wallets"    parent="menu_fin_cfg" action="action_fin_wallet"/>
+</odoo>
